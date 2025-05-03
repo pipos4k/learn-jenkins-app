@@ -1,7 +1,7 @@
 pipeline {
     agent any
 
-    INDEX_FILE = "/build/index.html"
+    // INDEX_FILE = ""
 
     stages{
         stage("Build"){
@@ -26,7 +26,7 @@ pipeline {
             steps{
                 sh """
                     echo 'Test stage'
-                    if test -f "/path/to/file"; then
+                    if test -f "/build/index.html"; then
                         echo "File exists."
                     else
                         echo "File does not exist."
