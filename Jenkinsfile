@@ -26,10 +26,10 @@ pipeline {
             steps{
                 sh """
                     echo 'Test stage'
-                    if test -f "/build/index.html"; then
-                        echo "File exists."
+                    if test -f '/build/index.html'; then
+                        echo 'File exists.'
                     else
-                        echo "File does not exist."
+                        echo 'File does not exist.'
                     fi
 
                     npm test
